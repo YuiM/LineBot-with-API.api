@@ -29,7 +29,6 @@ module.exports = class dietitian {
             json: true
         });
     }
-
     static askWhichFood(replyToken, foodList){
         var headers = {
             'Content-Type': 'application/json',
@@ -47,25 +46,23 @@ module.exports = class dietitian {
                 }
             }]
         }
-
-        // Templateメッセージのactionsに確認すべき食品を追加。
-                 for (var food of foodList){
-                             body.messages[0].template.actions.push({
-                                             type: 'postback',
-                                                             label: food.food_name,
-                                                                             data: JSON.stringify(food)
-                                                                                         });                                                                                                        if (body.messages[0].template.actions.length == 4){
-                                                                                                                               break;
-                                                                                                                                             }
-                                                                                                                                                     }
-        
-                                                                                                                                                             var url = 'https://api.line.me/v2/bot/message/reply';
-                                                                                                                                                                     request({
-                                                                                                                                                                                 url: url,
-                                                                                                                                                                                             method: 'POST',
-                                                                                                                                                                                                         headers: headers,
-                                                                                                                                                                                                                     body: body,
-                                                                                                                                                                                                                                 json: true
-                                                                                                                                                                                                                                         });
-                                                                                                                                                                                                                                             }
-                                                                                                                                                                                                                                             }
+        for (var food of foodList){
+            body.messages[0].template.actions.push({
+                type: 'postback',
+                label: food.food_name,
+                data: JSON.stringify(food)
+            });
+            if (body.messages[0].template.actions.length == 4){
+                break;
+            }
+        }
+        var url = 'https://api.line.me/v2/bot/message/reply';
+        request({
+            url: url,
+            method: 'POST',
+            headers: headers,
+            body: body,
+            json: true
+        });
+    }
+}
