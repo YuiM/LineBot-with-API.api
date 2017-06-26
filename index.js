@@ -5,6 +5,7 @@
   var bodyParser = require('body-parser'); // 追加
   var request = require('request'); // 追加  
   var mecab = require('mecabaas-client'); // 追加 
+  var shokuhin = require('shokuhin-db');
   var app = express();
 // // ミドルウェア設定
   app.use(bodyParser.urlencoded({ extended: false }));
