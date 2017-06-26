@@ -28,4 +28,16 @@
 //
 // // -----------------------------------------------------------------------------
 // // ミドルウェア設定
+ app.use(bodyParser.urlencoded({ extended: false }));
  app.use(bodyParser.json()); // 追加
+
+
+
+app.post('/webhook', function(req, res, next){
+    res.status(200).end();
+    for (var event of req.body.events){
+        if (event.type == 'message'){
+            console.log(event.message);
+        }
+    }
+});
