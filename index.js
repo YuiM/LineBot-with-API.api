@@ -34,7 +34,7 @@ app.post('/webhook', function(req, res, next){
                 replyToken: event.replyToken,
                 messages: [{
                     type: 'text',
-                    text: 'kiriake said www'
+                    text: 'なっち'
                 }]
             }
             var url = 'https://api.line.me/v2/bot/message/reply';
