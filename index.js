@@ -19,4 +19,13 @@
           res.status(200).end();
           console.log(req.body);
       });
-
+// -----------------------------------------------------------------------------
+// // モジュールのインポート
+ var express = require('express');
+ var bodyParser = require('body-parser'); // 追加
+ var app = express();
+//
+//
+// // -----------------------------------------------------------------------------
+// // ミドルウェア設定
+ app.use(bodyParser.json()); // 追加
