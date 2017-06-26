@@ -25,7 +25,7 @@
 app.post('/webhook', function(req, res, next){
     res.status(200).end();
     for (var event of req.body.events){
-        if (event.type == 'message' && event.message.text == 'ハロー'){
+        if (event.type == 'message' && event.message.text == 'kiriake said www'){
             var headers = {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
