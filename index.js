@@ -1,5 +1,8 @@
 // -----------------------------------------------------------------------------
   const LINE_CHANNEL_ACCESS_TOKEN = 'cEZnXk+iZCdy6PledOz2v5NBbRE/oT9gRCV20SWI1gJeBd1+vqDLQbRCtIRmF+IfBajc+wh0dE9GqctEJbLLoo8tw6dJGwAwDVbjvDzHKHxOhimHsQ16Wthtiv5SqfUcTH1i+/pvsukH4vu6JTMNIAdB04t89/1O/w1cDnyilFU='; // 追加
+const APIAI_CLIENT_ACCESS_TOKEN = '095b99583ebb417e9f5f589430533ced';
+
+
 // // モジュールのインポート 
   var express = require('express');
   var bodyParser = require('body-parser'); // 追加
