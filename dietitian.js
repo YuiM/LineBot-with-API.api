@@ -4,7 +4,47 @@ const LINE_CHANNEL_ACCESS_TOKEN = 'cEZnXk+iZCdy6PledOz2v5NBbRE/oT9gRCV20SWI1gJeB
 var request = require('request');
 
 module.exports = class dietitian {
-    static replyTotalCalorie(replyToken, foodList){
+static replyRecommendation(replyToken){
+    var headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
+    }
+    var body = {
+        replyToken: replyToken,
+        messages: [{
+            type: 'text',
+            text: 'カレーライスでもどうですか？'
+        }]
+    }
+    var url = 'https://api.line.me/v2/bot/message/reply';
+    request({
+        url: url,
+        method: 'POST',
+        headers: headers,
+        body: body,
+        json: true
+    });
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+static replyTotalCalorie(replyToken, foodList){
         var totalCalorie = 0;
         for (var food of foodList){
             totalCalorie += food.calorie;

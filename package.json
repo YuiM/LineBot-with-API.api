@@ -9,10 +9,13 @@
   "author": "yu mori",
   "license": "MIT",
   "dependencies": {
+    "apiai": "^4.0.2",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mecabaas-client": "^1.0.2",
     "memory-cache": "^0.2.0",
+    "node-uuid": "^1.4.8",
     "request": "^2.81.0",
     "shokuhin-db": "^1.0.2"
   }
