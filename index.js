@@ -163,12 +163,15 @@ var aiInstance = apiai(APIAI_CLIENT_ACCESS_TOKEN, {language:'ja'});
                     console.log(response.result.action);
                     switch (response.result.action) {
                         case 'recommendation':
-                            
-                            dietitian.replyRecommendation(event.replyToken);
-
-                         
+                            dietitian.replyRecommendation(event.replyToken);        
                             main.cancel();
                             break;
+                        case 'kiriake':
+                            dietitian.replyKiriake(event.replyToken);
+                            main.cancel();
+                            break;
+
+
                         default:
                         return mecab.parse(event.message.text);
                             break;
