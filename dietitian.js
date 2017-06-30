@@ -48,7 +48,7 @@ static replyKiriake(replyToken){
     });
 }
 
-static replyTsujikyun(replyToken){
+static replyTsuji(replyToken){
     var headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
