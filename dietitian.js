@@ -26,7 +26,7 @@ static replyRecommendation(replyToken){
     });
 }    
 
-static replyKiriake(replyToken){
+static replyKiriake(replyToken,reptext){
     var headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
@@ -35,7 +35,7 @@ static replyKiriake(replyToken){
         replyToken: replyToken,
         messages: [{
             type: 'text',
-            text: replyToken.result.fulfillment.speech
+            text: reptext
         }]
     }
     var url = 'https://api.line.me/v2/bot/message/reply';

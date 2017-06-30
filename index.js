@@ -170,7 +170,7 @@ var aiInstance = apiai(APIAI_CLIENT_ACCESS_TOKEN, {language:'ja'});
                             main.cancel();
                             break;
                         case 'kiriake':
-                            dietitian.replyKiriake(event.replyToken);
+                            dietitian.replyKiriake(event.replyToken,response.result.fulfillment.speech);
                             main.cancel();
                             break;
                         case 'tsujikyun':
