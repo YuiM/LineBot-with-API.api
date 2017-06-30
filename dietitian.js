@@ -48,7 +48,7 @@ static replyKiriake(replyToken,reptext){
     });
 }
 
-static replyTsuji(replyToken){
+static replyTsuji(replyToken,reptext){
     var headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
@@ -57,7 +57,7 @@ static replyTsuji(replyToken){
         replyToken: replyToken,
         messages: [{
             type: 'text',
-            text: 'かしこまりました。'
+            text: reptext
         }]
     }
     var url = 'https://api.line.me/v2/bot/message/reply';
