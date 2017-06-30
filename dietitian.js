@@ -48,6 +48,40 @@ static replyKiriake(replyToken){
     });
 }
 
+static replyTsujikyun(replyToken){
+    var headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
+    }
+    var body = {
+        replyToken: replyToken,
+        messages: [{
+            type: 'text',
+            text: 'かしこまりました。'
+        }]
+    }
+    var url = 'https://api.line.me/v2/bot/message/reply';
+    request({
+        url: url,
+        method: 'POST',
+        headers: headers,
+        body: body,
+        json: true
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
