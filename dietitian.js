@@ -35,7 +35,7 @@ static replyKiriake(replyToken){
         replyToken: replyToken,
         messages: [{
             type: 'text',
-            text: 'www'
+            text: replyToken.response
         }]
     }
     var url = 'https://api.line.me/v2/bot/message/reply';
