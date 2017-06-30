@@ -161,7 +161,7 @@ var aiInstance = apiai(APIAI_CLIENT_ACCESS_TOKEN, {language:'ja'});
             var main = gotIntent.then(
                 function(response){
                     console.log(response.result.action);
-                    console.log(response.fulfillment.messages.speech);
+                    console.log(response.result.fulfillment.messages.speech);
                     //console.log(response.result.text);
                     //console.log(response.result.response);
                     switch (response.result.action) {
