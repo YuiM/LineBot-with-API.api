@@ -47,7 +47,7 @@ app.post('/webhook', function(req, res, next){
                 replyToken: event.replyToken,
                 messages: [{
                     type: 'text',
-                    text: 'なっち'
+                    text: 'www'
                 }]
             }
             var url = 'https://api.line.me/v2/bot/message/reply';
