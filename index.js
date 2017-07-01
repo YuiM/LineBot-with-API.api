@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------------
-  const LINE_CHANNEL_ACCESS_TOKEN = 'cEZnXk+iZCdy6PledOz2v5NBbRE/oT9gRCV20SWI1gJeBd1+vqDLQbRCtIRmF+IfBajc+wh0dE9GqctEJbLLoo8tw6dJGwAwDVbjvDzHKHxOhimHsQ16Wthtiv5SqfUcTH1i+/pvsukH4vu6JTMNIAdB04t89/1O/w1cDnyilFU='; // 追加
-const APIAI_CLIENT_ACCESS_TOKEN = '095b99583ebb417e9f5f589430533ced';
+  const LINE_CHANNEL_ACCESS_TOKEN = ''; // 追加
+const APIAI_CLIENT_ACCESS_TOKEN = '';
 
 
 // // モジュールのインポート 
@@ -148,7 +148,6 @@ app.post('/webhook', function(req, res, next){
     for (var event of req.body.events){
         if (event.type == 'message' && event.message.text){
            
-
 var aiInstance = apiai(APIAI_CLIENT_ACCESS_TOKEN, {language:'ja'});
             var aiRequest = aiInstance.textRequest(event.message.text, {sessionId: uuid.v1()});
             var gotIntent = new Promise(function(resolve, reject){
